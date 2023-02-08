@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  src: url("/assets/fonts/Orbitron-VariableFont_wght.ttf");
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  font-family: Sans-Serif;
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(36, 36, 36);
+}
+
+.page__wrapper {
+  padding: 0px;
+  margin: 0px;
+  background-color: darkgrey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+}
+
+.text--s {
+  font-size: 12px;
+}
+
+.text--m {
+  font-size: 14px;
+}
+
+.icon-header-location {
+  fill: black;
+}
+.icon-header-location:hover {
+  fill: #EDA415;
+}
+
+.link:hover {
+  color: white;
+}
+
+.help-phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.location-link__text {
+  margin-left: 5px;
+}
+
+.track-order-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.track-order-link:hover {
+  color: #EDA415;
+}
+
+.track-order-link__text {
+  margin-left: 5px;
+}
+
+.icon-header-track-order {
+  stroke: #000000;
+  fill: none;
+}
+.icon-header-track-order:hover {
+  stroke: #EDA415;
+}
+
+.header__contact {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+.location-and-track-order-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+.location-and-track-order-links :last-child {
+  margin-left: 10px;
+}
