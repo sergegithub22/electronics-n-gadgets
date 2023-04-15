@@ -1,2 +1,2 @@
 # E-commerce
-template
+Web-site HTML template. In dev
