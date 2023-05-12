@@ -203,14 +203,16 @@ background: black;
 .animateddrawer{
 	font-size: 10px; /* Base font size. Adjust this value to modify size of drawer icon */
   width: 3em; 
-  height: 2.8em; 
+  height: 2.1em; 
   outline: none;
-	position: fixed; /* BY default, make toggler fixed on screen */
+	position: relative; /* BY default, make toggler fixed on screen. Origin - fixed. Changed this and below styles for el'n'gadgets 12/05/23  */
+  float: right;
 	display: none;
-	top: 10px; /* Position at upper right corner */
+	/*top: 10px;  Position at upper right corner */ 
 	right: 10px;
-	background: white;
+	background: inherit;
 	z-index: 1000;
+  order: 2;
 }
 
 .animateddrawer:before, .animateddrawer:after{
@@ -218,7 +220,7 @@ background: black;
   content: '';
   display: block;
   width: 100%;
-  height: 0.6em; /* height of top and bottom drawer line */
+  height: 0.3em; /* height of top and bottom drawer line */
   background: black;
   border-radius: 2px;
   top: 0;
@@ -235,11 +237,11 @@ background: black;
 
 .animateddrawer span{
   width: 100%;
-  height: 0.6em; /* height of middle drawer line */
+  height: 0.3em; /* height of middle drawer line */
   background: black;
   position: absolute;
   top: 50%;
-  margin-top: -0.3em; /* set this to - half of middle drawer line height */
+  margin-top: -0.15em; /* set this to - half of middle drawer line height */
   border-radius: 2px;
   -ms-transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
@@ -252,7 +254,7 @@ background: black;
   content: '';
   display: block;
   width: 100%;
-  height: 0.6em; /* height of middle drawer line */
+  height: 0.3em; /* height of middle drawer line */
   background: black;
   border-radius: 2px;
   position: absolute;
