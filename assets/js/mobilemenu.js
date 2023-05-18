@@ -1,0 +1,1 @@
+"use strict";const parent=document.querySelector(".ddsmoothmobile");console.log(parent);let div=document.createElement("div");parent.append(div),div.textContent="gfge7r7345645674675";

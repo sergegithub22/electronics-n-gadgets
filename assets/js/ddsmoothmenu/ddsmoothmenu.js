@@ -252,6 +252,7 @@ buildmobilemenu: function($, setting, $ul){
 
 	if (!this.mobilecontainer.$main){ // if primary mobile menu container not defined yet
 		var $maincontainer = $('<div class="ddsmoothmobile"><div class="topulsdiv"></div></div>').appendTo(document.body)
+
 		$maincontainer
 			.css({zIndex: this.mobilezindexvalue++, left: '-100%', visibility: 'hidden'})
 			.on('click', function(e){ // assign click behavior to mobile container
@@ -287,8 +288,22 @@ buildmobilemenu: function($, setting, $ul){
 		var $maincontainer = this.mobilecontainer.$main
 		var $topulsdiv = this.mobilecontainer.$topulsdiv
 	}
+
+// ----------------------------------------------- my mod 
+
+
+
+	var $p = document.createElement('p')
+	$p.textContent = '5675756757567575gfghf'
+	// $p.css({position: 'absolute'})
+	$p.style.color = 'black';
+	
+
+
+
 	$topulsdiv.append($topulref).css({zIndex: this.mobilezindexvalue++})
 	$maincontainer.append(flattened)
+	$topulsdiv.append($p)
 
 	setting.mobilemenustate = 'done'
 	
