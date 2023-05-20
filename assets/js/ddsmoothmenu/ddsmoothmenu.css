@@ -136,7 +136,7 @@ position: fixed;
 top: 0;
 left: 0;
 width: 70%; /* width of mobile menu */
-height: min-content;
+max-height: 90%;
 overflow: hidden;
 visibility: hidden;
 border-radius: 0 0 10px 0;
@@ -178,7 +178,7 @@ overflow-y: auto;
 }
 
 div.ddsmoothmobile ul li{
-border-bottom: 1px solid rgb(199, 199, 199);
+/* border-bottom: 1px solid rgb(199, 199, 199); */
 position: relative;
 font-weight: bold;
 }

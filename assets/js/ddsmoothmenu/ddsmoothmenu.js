@@ -292,18 +292,92 @@ buildmobilemenu: function($, setting, $ul){
 // ----------------------------------------------- my mod 
 
 
+function sigIn(){
+	var $sigIn = new DocumentFragment()
+	var $liMenu = document.createElement('li')
+	var $aMenu = document.createElement('a')
+	$aMenu.setAttribute('href', '#')
+	$aMenu.textContent = 'Sign in'
+	$aMenu.style.color = 'white';
+	$aMenu.style.backgroundColor = '#003F62';
+	
+	$sigIn.append($liMenu)
+	$liMenu.append($aMenu)
+	return $sigIn
+}
+function favorites(){
+	var $favorites = new DocumentFragment()
+	var $liMenu = document.createElement('li')
+	var $aMenu = document.createElement('a')
+	$aMenu.setAttribute('href', '#')
+	$aMenu.textContent = 'Favorites'
+	$aMenu.style.color = 'white';
+	$aMenu.style.backgroundColor = '#003F62';
+	
+	$favorites.append($liMenu)
+	$liMenu.append($aMenu)
+	return $favorites
+}
+function cart(){
+	var $cart = new DocumentFragment()
+	var $liMenu = document.createElement('li')
+	var $aMenu = document.createElement('a')
+	$aMenu.setAttribute('href', '#')
+	$aMenu.textContent = 'Cart'
+	$aMenu.style.color = 'white';
+	$aMenu.style.backgroundColor = '#003F62';
+	$cart.append($liMenu)
+	$liMenu.append($aMenu)
+	return $cart
+}
+function ourStore(){
+	var $ourStore = new DocumentFragment()
+	var $liMenu = document.createElement('li')
+	var $aMenu = document.createElement('a')
+	$aMenu.setAttribute('href', '#')
+	$aMenu.textContent = 'Our store'
+	$aMenu.style.color = 'black';
+	$aMenu.style.backgroundColor = 'white';
+	$ourStore.append($liMenu)
+	$liMenu.append($aMenu)
+	return $ourStore
+}
+function order(){
+	var $order = new DocumentFragment()
+	var $liMenu = document.createElement('li')
+	var $aMenu = document.createElement('a')
+	$aMenu.setAttribute('href', '#')
+	$aMenu.textContent = 'Track your order'
+	$aMenu.style.color = 'black';
+	$aMenu.style.backgroundColor = 'white';
+	$order.append($liMenu)
+	$liMenu.append($aMenu)
+	return $order
+}
+function helpCallUs(){
+	var $helpCallUs = new DocumentFragment()
+	var $liMenu = document.createElement('li')
 
-	var $p = document.createElement('p')
-	$p.textContent = '5675756757567575gfghf'
-	// $p.css({position: 'absolute'})
-	$p.style.color = 'black';
+	$liMenu.textContent = 'Need help? Call us: (+98) 0234 456 789'
+	$liMenu.style.color = 'black';
+	$liMenu.style.backgroundColor = 'white';
+	$helpCallUs.append($liMenu)
+	return $helpCallUs
+}
+	
+
+	
+
+	
 	
 
 
 
 	$topulsdiv.append($topulref).css({zIndex: this.mobilezindexvalue++})
 	$maincontainer.append(flattened)
-	$topulsdiv.append($p)
+
+	$topulref.append(sigIn(), favorites(),cart(),ourStore(),order(),helpCallUs())
+
 
 	setting.mobilemenustate = 'done'
 	
