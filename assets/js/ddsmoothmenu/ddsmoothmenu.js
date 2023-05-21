@@ -50,7 +50,7 @@ var ddsmoothmenu = {
 
 mobilemediaquery: "screen and (max-width: 900px)", // CSS media query string that when matched activates mobile menu (while hiding default)
 //Specify full URL to down and right arrow images (23 is padding-right for top level LIs with drop downs, 6 is for vertical top level items with fly outs):
-arrowimages: {down:['downarrowclass', 'assets/js/ddsmoothmenu/down.gif', 23], right:['rightarrowclass', 'assets/js/ddsmoothmenu/right.gif', 6], left:['leftarrowclass', 'assets/js/ddsmoothmenu/left.gif']},
+arrowimages: {down:['downarrowclass', 'assets/js/ddsmoothmenu/arrow-down.svg', 23], right:['rightarrowclass', 'assets/js/ddsmoothmenu/arrow-right.svg', 6], left:['leftarrowclass', 'assets/js/ddsmoothmenu/arrow-left.svg']},
 transition: {overtime:300, outtime:300}, //duration of slide in/ out animation, in milliseconds
 mobiletransition: 200, // duration of slide animation in mobile menu, in milliseconds
 shadow: false, //enable shadow? (offsets now set in ddsmoothmenu.css stylesheet)
@@ -300,6 +300,7 @@ function sigIn(){
 	$aMenu.textContent = 'Sign in'
 	$aMenu.style.color = 'white';
 	$aMenu.style.backgroundColor = '#003F62';
+	$aMenu.insertAdjacentHTML('afterbegin', '<svg class="signin-icom-mobile-menu" height="18" width="18" viewBox="0 0 25 24"><use xlink:href="assets/images/common/header-sprite.svg#user"></use></svg>')
 	
 	$sigIn.append($liMenu)
 	$liMenu.append($aMenu)
@@ -313,7 +314,7 @@ function favorites(){
 	$aMenu.textContent = 'Favorites'
 	$aMenu.style.color = 'white';
 	$aMenu.style.backgroundColor = '#003F62';
-	
+	$aMenu.insertAdjacentHTML('afterbegin', '<svg class="favorites-icom-mobile-menu" height="18" width="18" viewBox="0 0 25 24"><use xlink:href="assets/images/common/header-sprite.svg#heart"></use></svg>')
 	$favorites.append($liMenu)
 	$liMenu.append($aMenu)
 	return $favorites
@@ -326,6 +327,7 @@ function cart(){
 	$aMenu.textContent = 'Cart'
 	$aMenu.style.color = 'white';
 	$aMenu.style.backgroundColor = '#003F62';
+	$aMenu.insertAdjacentHTML('afterbegin', '<svg class="cart-icom-mobile-menu" height="18" width="18" viewBox="0 0 25 24"><use xlink:href="assets/images/common/header-sprite.svg#shopping-cart"></use></svg>')
 	$cart.append($liMenu)
 	$liMenu.append($aMenu)
 	return $cart
@@ -338,6 +340,7 @@ function ourStore(){
 	$aMenu.textContent = 'Our store'
 	$aMenu.style.color = 'black';
 	$aMenu.style.backgroundColor = 'white';
+	$aMenu.insertAdjacentHTML('afterbegin', '<svg class="location-icom-mobile-menu" height="18" width="18" viewBox="0 0 25 24"><use xlink:href="assets/images/common/header-sprite.svg#location"></use></svg>')
 	$ourStore.append($liMenu)
 	$liMenu.append($aMenu)
 	return $ourStore
@@ -350,6 +353,7 @@ function order(){
 	$aMenu.textContent = 'Track your order'
 	$aMenu.style.color = 'black';
 	$aMenu.style.backgroundColor = 'white';
+	$aMenu.insertAdjacentHTML('afterbegin', '<svg class="order-icom-mobile-menu" height="18" width="18" viewBox="0 0 25 24"><use xlink:href="assets/images/common/header-sprite.svg#track-order"></use></svg>')
 	$order.append($liMenu)
 	$liMenu.append($aMenu)
 	return $order

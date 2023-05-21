@@ -137,7 +137,8 @@ top: 0;
 left: 0;
 width: 70%; /* width of mobile menu */
 max-height: 90%;
-overflow: hidden;
+overflow: auto;
+overflow-x: hidden;
 visibility: hidden;
 border-radius: 0 0 10px 0;
 box-shadow: 0 0 10px gray;
@@ -167,7 +168,9 @@ margin: 0;
 padding: 0;
 }
 
-div.ddsmoothmobile div.topulsdiv ul.submenu{ /* top level ULs style */
+div.ddsmoothmobile div.topulsdiv ul.submenu{     /* top level ULs style */
+ 
+  
 }
 
 
@@ -180,17 +183,22 @@ overflow-y: auto;
 div.ddsmoothmobile ul li{
 /* border-bottom: 1px solid rgb(199, 199, 199); */
 position: relative;
-font-weight: bold;
+font-weight: 500;
+  font-size: 14px;
 }
 
-div.ddsmoothmobile ul li.breadcrumb{ /* breadcrumb LI that's added to the top of every sub level UL */
-cursor: pointer;
-padding: 15px;
-background: rgb(190, 190, 190);
+div.ddsmoothmobile ul li.breadcrumb{
+  display: flex;
+  align-items: center; /* breadcrumb LI that's added to the top of every sub level UL */
+  cursor: pointer;
+  padding: 15px;
+  background: rgb(190, 190, 190);
 }
 
 div.ddsmoothmobile ul li a{
-display: block;
+
+  display: flex;
+  align-items: center;
 padding: 15px;
 }
 
@@ -228,6 +236,7 @@ background: #dddddd;
   opacity: 1;
   -webkit-transition: all 0.3s ease-in; /* set transition type and time */
   transition: all 0.3s ease-in; 
+  transition-delay: 0.5s;
 }
 
 .animateddrawer:after{
@@ -272,11 +281,13 @@ background: #dddddd;
   top: 50%;
   margin-top: -0.3em; /* set this to - half of top drawer line height */
   opacity: 0;
+  transition-delay: 0s;
 }
 
 .animateddrawer.open:after{ /* style when .open class is added to button */
   bottom: 50%;
   opacity: 0;
+  transition-delay: 0s;
 }
 
 .animateddrawer.open span{ /* style when .open class is added to button */
