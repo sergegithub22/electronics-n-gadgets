@@ -1,5 +1,6 @@
 node_modules/
 source/
+transit/
 gulpfile.js
 package-lock.json
 package.json
