@@ -362,7 +362,7 @@ function helpCallUs(){
 	var $helpCallUs = new DocumentFragment()
 	var $liMenu = document.createElement('li')
 
-	$liMenu.textContent = 'Need help? Call us: (+98) 0234 456 789'
+	$liMenu.textContent = 'Need help? Call us:' + '\t' + '(+98) 0234 456 789'
 	$liMenu.style.color = 'black';
 	$liMenu.style.backgroundColor = 'white';
 	$helpCallUs.append($liMenu)
@@ -371,10 +371,6 @@ function helpCallUs(){
 	
 
 	// ----------------------------------------------- start my mod
-
-	
-	
-
 
 
 	$topulsdiv.append($topulref).css({zIndex: this.mobilezindexvalue++})
