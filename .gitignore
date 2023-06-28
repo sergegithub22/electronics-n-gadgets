@@ -5,4 +5,4 @@ gulpfile.js
 package-lock.json
 package.json
 Thumbs.db
-.gitignor
+.gitignore
